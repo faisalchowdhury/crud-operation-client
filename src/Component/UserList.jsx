@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 
 const UserList = () => {
@@ -45,9 +45,11 @@ const UserList = () => {
             <p>Occupation : {user.occupation}</p>
             <br />
             <div className="space-x-3">
-              <button className="btn bg-yellow-600 text-white border-none rounded-full">
-                Edit Profile
-              </button>
+              <Link to={`/update-user/${user._id}`}>
+                <button className="btn bg-yellow-600 text-white border-none rounded-full">
+                  Edit Profile
+                </button>
+              </Link>
 
               <button
                 onClick={() => handleDelete(user._id)}
