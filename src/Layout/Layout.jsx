@@ -1,14 +1,14 @@
-import React from 'react';
-import Navbar from '../Component/Navbar';
-import AddUser from '../Component/AddUser';
-
+import React from "react";
+import Navbar from "../Component/Navbar";
+import { Outlet } from "react-router";
+import "../App.css";
 const Layout = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
-            <AddUser></AddUser>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+    </div>
+  );
 };
 
 export default Layout;

@@ -1,4 +1,11 @@
 @import "tailwindcss";
-@plugin 'daisyui'  {
-  themes : none;
+@plugin 'daisyui' {
+  themes: none;
+}
+.input-field {
+  @apply border border-gray-400 rounded;
+}
+
+a.active {
+  color: brown;
 }
