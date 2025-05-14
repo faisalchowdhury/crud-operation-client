@@ -26,8 +26,10 @@ const AddUser = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          console.log(data);
+
+          form.reset();
         }
-        console.log(data);
       });
   };
   return (
