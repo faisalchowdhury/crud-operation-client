@@ -9,7 +9,7 @@ const AddUser = () => {
     const formData = new FormData(form);
     const formFields = Object.fromEntries(formData.entries());
 
-    fetch("http://localhost:3000/users", {
+    fetch("https://crud-operation-server-eight.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

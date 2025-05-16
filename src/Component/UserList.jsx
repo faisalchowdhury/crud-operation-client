@@ -14,9 +14,12 @@ const UserList = () => {
       denyButtonText: `Cancel`,
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/user-delete/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://crud-operation-server-eight.vercel.app/user-delete/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

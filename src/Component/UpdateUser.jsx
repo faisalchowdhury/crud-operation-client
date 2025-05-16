@@ -11,13 +11,16 @@ const UpdateUser = () => {
     const formData = new FormData(form);
     const formFields = Object.fromEntries(formData);
 
-    fetch(`http://localhost:3000/update-user/${data._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formFields),
-    })
+    fetch(
+      `https://crud-operation-server-eight.vercel.app/update-user/${data._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formFields),
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
   };

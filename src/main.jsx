@@ -16,7 +16,8 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: UserList,
-        loader: () => fetch("http://localhost:3000/users"),
+        loader: () =>
+          fetch("https://crud-operation-server-eight.vercel.app/users"),
       },
       {
         path: "/add-user",
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
         path: "/update-user/:id",
         Component: UpdateUser,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/update-user/${params.id}`),
+          fetch(
+            `https://crud-operation-server-eight.vercel.app/update-user/${params.id}`
+          ),
       },
     ],
   },
